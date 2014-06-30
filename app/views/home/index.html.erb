@@ -1,0 +1,12 @@
+<div class="container">
+  <h1>You wantsa pizza eh?</h1>
+  <%= form_tag "/calculate", method: "get", class: "form" do %>
+    <br/>
+    <%= label_tag(:people, "How many hungry people?") %>
+    <br />
+    <%= number_field :people, :count, in: 1.0..20000.0, step: 1.0, value: 0 %>
+    <br />
+    <br />
+    <%= submit_tag "Calculate", class: "btn btn-success" %>
+  <% end %>
+</div>
